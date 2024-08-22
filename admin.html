@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="./styles/admin.css"> <!-- Pridedame nuorodą į CSS failą -->
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Panel</h1>
+
+        <!-- Prisijungimo forma -->
+        <div id="loginSection" class="card">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+                <button type="submit">Login</button>
+            </form>
+            <div id="loginResult" class="message"></div>
+        </div>
+
+        <!-- Administravimo funkcijos - bus rodomos tik prisijungus -->
+        <div id="adminFunctions" style="display: none;">
+            <button id="logoutButton" class="btn-logout">Logout</button>
+
+            <div class="card">
+                <h2>Existing Items</h2>
+                <div id="itemsList">
+                    <!-- Prekių sąrašas bus čia įkeltas -->
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Add New Item</h2>
+                <form id="addItemForm">
+                    <label for="itemName">Name:</label>
+                    <input type="text" id="itemName" required>
+                    <label for="itemDescription">Description:</label>
+                    <input type="text" id="itemDescription" required>
+                    <label for="itemPrice">Price:</label>
+                    <input type="number" id="itemPrice" required>
+                    <button type="submit">Add Item</button>
+                </form>
+            </div>
+
+            <div class="card">
+                <h2>Update Item</h2>
+                <form id="updateItemForm">
+                    <label for="updateItemId">Item ID:</label>
+                    <input type="number" id="updateItemId" required>
+                    <label for="updateItemName">Name:</label>
+                    <input type="text" id="updateItemName" required>
+                    <label for="updateItemDescription">Description:</label>
+                    <input type="text" id="updateItemDescription" required>
+                    <label for="updateItemPrice">Price:</label>
+                    <input type="number" id="updateItemPrice" required>
+                    <button type="submit">Update Item</button>
+                </form>
+            </div>
+
+            <div class="card">
+                <h2>Delete Item</h2>
+                <form id="deleteItemForm">
+                    <label for="deleteItemId">Item ID:</label>
+                    <input type="number" id="deleteItemId" required>
+                    <button type="submit">Delete Item</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="result" class="message"></div>
+    </div>
+
+    <script src="./js/admin.js"></script>
+</body>
+</html>

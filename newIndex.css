@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+    background-image: url("./imgs/background.jpg");
+    padding: 1vh 30vh;
+}
+
+.left-col {
+    flex: 2;
+}
+
+
+header > img {
+    max-height: 55px;
+    background: transparent;
+    float: left;
+}
+
+
+.top-nav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 16px 16px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-right: 1vh;
+    background-color: #f9f9f9;
+    filter: drop-shadow(0 0.5px 1px #0009);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.top-nav a:hover{
+    color:#ff4949;
+}
+
+header > span {
+    float: right;
+    display: block;
+    text-align: center;
+    padding: 15px;
+    font-size: 15px;
+    color:#ff4949;
+    border-radius: 10%;
+    cursor: pointer;
+    margin-right: 1vh;
+    background-color: #f9f9f9;
+    filter: drop-shadow(0 0.5px 1px #0009);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header > span:hover {
+    color: black;
+}
+
+.count {
+    display: flex;
+    justify-content: center;
+    min-width: 21px;
+    height: 21px;
+    padding: 5;
+    border: 2px solid #fff;
+    border-radius: 13px;
+    position: absolute;
+    top: 35px;
+    right: 1px;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    color: #fff;
+    background: #ed1c24;
+}
+
+header > input[type=text] {
+    padding: 14px 16px;
+    font-size: 17px;
+    border: none;
+    min-width: 53%;
+    background-color: #f9f9f9;
+    filter: drop-shadow(0 0.5px 1px #0009);
+}
+
+header > button {
+    padding: 14px 16px;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10%;
+    background-color: #f9f9f9;
+    filter: drop-shadow(0 0.5px 1px #0009);
+}
+
+.content-col {
+    display: flex;
+    flex-direction: column;
+    flex: 10;
+    
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    
+}
+  
+.content > article {
+    flex: 4;
+    min-height: 87vh;
+}
+
+header {
+    height: 8vh;
+   
+}
+footer {
+    height: 5vh;
+    
+}
+header, footer, article, nav {
+    padding: 10px;
+    background-color: #f9f9f9f3;
+}
+
+/* PRODUKTAI START */
+
+.productList .item img {
+    width: 100%;
+    height: 150px; /* Nustatykite fiksuotą aukštį */
+    object-fit: cover; /* Užtikrina, kad paveikslėlis išlaikytų proporcijas ir užpildytų visą vietą */
+    filter: drop-shadow(0 5px 5px #0009);
+    background-color: transparent;
+    background-image: url('./imgs/noimg.png');
+    background-position: center;
+    image-rendering: optimizeSpeed;
+}
+
+.productList{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 10px;
+}
+
+.productList .item {
+    background-color: rgb(255, 236, 211);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.productList .item h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: medium;
+    height: 100px;
+}
+
+.productList .item .price {
+    letter-spacing: 5px;
+    font-size:medium;
+    filter: drop-shadow(0 50px 50px rgba(204, 204, 204, 0.315));
+}
+
+.productList .item button{
+    background-color: #ff4949;
+    color: rgb(255, 236, 211);
+    padding: 5px 20px;
+    border-radius: 2px;
+    border: 0;
+    margin-top: 10px;
+    cursor:pointer;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.productList .item button:hover{
+    color: black;
+}
+
+@media screen and (max-width: 1902px) {
+    .productList {
+        grid-template-columns: repeat(4,1fr);
+    }
+
+    body {
+        padding: 0;
+    }
+
+    .count {
+        top: 35px;
+        right: 1px;
+    }
+}
+
+.productDetailsFull {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px; /* Atstumas tarp kairės ir dešinės dalies */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1vh;
+}
+
+.productDetailsFull .fullLeft img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
+}
+
+.productDetailsFull .fullRight {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.productDetailsFull .fullRight h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    color: #333;
+}
+
+.productDetailsFull .fullRight ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.productDetailsFull .fullRight ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+.productDetailsFull .fullRight ul li:nth-child(1) {
+    font-size: 13px;
+    color: #ff3535;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+.productDetailsFull .fullRight ul li:nth-child(3) {
+    font-size: 15px;
+    background-color: #f7f7f7;
+    filter: drop-shadow(0 0.5px 1px #0009);
+    text-transform: uppercase;
+    padding: 20px;
+}
+
+
+.productDetailsFull .fullRight button {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.productDetailsFull .fullRight .button-container {
+    display: flex;
+    justify-content:right;
+}
+
+.productDetailsFull .fullRight .fullBtn {
+    border-radius: 0;
+    color: black;
+    text-align: center;
+    padding: 16px 16px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-right: 1vh;
+    background-color: #f9f9f9;
+    filter: drop-shadow(0 0.5px 1px #0009);
+}
+
+.productDetailsFull .fullRight .fullBtn:hover {
+    color:#ff4949;
+}
